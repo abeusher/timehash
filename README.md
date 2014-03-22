@@ -14,9 +14,15 @@ Features
 * timehash values are well suited to referencing time intervals in key-value stores (e.g. Hbase, Acculumo, Redis)
 * The creation of a compound key of space and time (e.g. geohash_timehash) is a powerful primitive for understanding geotemporal patterns
 
+Implementations
+---------------
+* [python timehash](https://github.com/abeusher/timehash/blob/master/timehash.py) - a reference implementation in pure python
+* [perl timehash](https://github.com/abeusher/timehash/blob/master/timehash.pl) - a reference implementation in perl
+* [java timehash](https://github.com/abeusher/timehash/blob/master/TimeHash.java) - a reference implementation in java
+
 Usage
 -----
-Calculate a timehash value
+Example of calculating a timehash value in python:
 ```python
 import timehash
 rightnow = time.time()

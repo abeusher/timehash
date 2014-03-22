@@ -25,9 +25,20 @@ Usage
 Example of calculating a timehash value in python:
 ```python
 import timehash
+import time
+
 rightnow = time.time()
-rightnow_hash = encode(rightnow, precision=10)
-print rightnow_hash
+rightnow60 = rightnow + 60.0
+
+rightnow_hash = timehash.encode(rightnow, precision=10)
+rightnow60_hash = timehash.encode(rightnow60, precision=10)
+
+print 'timehash of right now: %s' % rightnow_hash
+print 'timehash of now +60s: %s'% rightnow60_hash
+ 
+% timehash of right now: ae0f0ba1fc
+% timehash of now +60s: ae0f0baa1c
+
 ```
 
 License

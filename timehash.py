@@ -27,9 +27,6 @@
     (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
     SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
-import sys
-reload(sys)
-sys.setdefaultencoding("utf-8")
 import time
 import datetime
 
@@ -143,27 +140,27 @@ if __name__ == "__main__":
     year_future_from_now = rightnow + (86400*365.25)
     year_future_from_now_hash = encode(year_future_from_now)
 
-    print "one day ago\t\t", previous86400_hash
-    print "one hour ago\t\t", previous3600_hash
-    print "60 seconds ago\t\t", previous60_hash
-    print "now\t\t\t%s ***" % rightnow_hash
-    print "60 seconds future\t", rightnow60_hash
-    print "one hour in the future\t", rightnow3600_hash
-    print "one year from today\t", year_future_from_now_hash
-    print "\n"
+    print("one day ago\t\t{}".format(previous86400_hash))
+    print("one hour ago\t\t{}".format(previous3600_hash))
+    print("60 seconds ago\t\t{}".format(previous60_hash))
+    print("now\t\t\t{} ***".format(rightnow_hash))
+    print("60 seconds future\t{}".format(rightnow60_hash))
+    print("one hour in the future\t{}".format(rightnow3600_hash))
+    print("one year from today\t{}".format(year_future_from_now_hash))
+    print("\n")
 
     # Example of decoding and error check
     rightnow_calculated,time_error = decode_exactly(rightnow_hash)
-    print "original rightnow = %.2f (%s)" % (rightnow,rightnow_hash)
-    print "calculated rightnow = %.2f" % (rightnow_calculated)
-    print "time error = +/- %.2f seconds." % (time_error)    #
+    print("original rightnow = %.2f (%s)" % (rightnow,rightnow_hash))
+    print("calculated rightnow = %.2f" % (rightnow_calculated))
+    print("time error = +/- %.2f seconds." % (time_error))    #
 
-    print
-    print
+    print("\n")
+    print("\n")
     today = 'add0c'
     rightnow_calculated,time_error = decode_exactly(today)
     dt = datetime.datetime.fromtimestamp(rightnow_calculated)
-    print dt
-    print "original rightnow = %.2f (%s)" % (rightnow,rightnow_hash)
-    print "calculated rightnow = %.2f" % (rightnow_calculated)
-    print "time error = +/- %.2f seconds." % (time_error)
+    print(dt)
+    print("original rightnow = %.2f (%s)" % (rightnow,rightnow_hash))
+    print("calculated rightnow = %.2f" % (rightnow_calculated))
+    print("time error = +/- %.2f seconds." % (time_error))

@@ -31,9 +31,14 @@ import time
 import datetime
 
 __base32 = '01abcdef'
+__before = 'f01abcde'
+__after = '1abcdef0'
 __decodemap = { }
+__neighbormap = { }
+
 for i in range(len(__base32)):
     __decodemap[__base32[i]] = i
+    __neighbormap[__base32[i]] = (__before[i], __after[i])
 del i
 
 """
@@ -111,6 +116,34 @@ def encode(timeseconds, precision=10):
             bit = 0
             ch = 0
     return ''.join(timehash)
+
+def after(hashcode):
+    i = 1
+    for c in reversed(hashcode):
+        padding = (i - 1) * '0'
+        pos = len(hashcode) - i
+        if c != 'f':
+            ret = hashcode[:pos] + __neighbormap[c][1] + padding
+            return ret
+        else:
+            i += 1
+
+def before(hashcode):
+    i = 1
+    for c in reversed(hashcode):
+        padding = (i - 1) * 'f'
+        pos = len(hashcode) - i
+        if c != '0':
+            ret = hashcode[:pos] + __neighbormap[c][0] + padding
+            return ret
+        else:
+            i += 1
+
+def neighbors(hashcode):
+    return [before(hashcode), after(hashcode)]
+
+def expand(hashcode):
+    return [before(hashcode), hashcode, after(hashcode)]
 
 
 if __name__ == "__main__":

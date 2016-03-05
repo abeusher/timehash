@@ -117,18 +117,10 @@ def encode(timeseconds, precision=10):
             ch = 0
     return ''.join(timehash)
 
-def after(hashcode):
-    i = 1
-    for c in reversed(hashcode):
-        padding = (i - 1) * '0'
-        pos = len(hashcode) - i
-        if c != 'f':
-            ret = hashcode[:pos] + __neighbormap[c][1] + padding
-            return ret
-        else:
-            i += 1
-
 def before(hashcode):
+    """
+    Extract the hashcode for the preceding time-window.
+    """
     i = 1
     for c in reversed(hashcode):
         padding = (i - 1) * 'f'
@@ -139,10 +131,32 @@ def before(hashcode):
         else:
             i += 1
 
+def after(hashcode):
+    """
+    Extract the hashcode for the succeeding time-window.
+    """
+    i = 1
+    for c in reversed(hashcode):
+        padding = (i - 1) * '0'
+        pos = len(hashcode) - i
+        if c != 'f':
+            ret = hashcode[:pos] + __neighbormap[c][1] + padding
+            return ret
+        else:
+            i += 1
+
 def neighbors(hashcode):
+    """
+    Extract the hashcodes for the preceding and succeeding time-windows,
+    excluding the hashcode for the current time-window.
+    """
     return [before(hashcode), after(hashcode)]
 
 def expand(hashcode):
+    """
+    Extract the hashcodes for the preceding and succeeding time-windows,
+    including the hashcode for the current time-window.
+    """
     return [before(hashcode), hashcode, after(hashcode)]
 
 

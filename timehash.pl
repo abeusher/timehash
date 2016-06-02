@@ -91,7 +91,7 @@ sub encode
     my ($timeseconds, $precision) = @_;
     $precision = 10 if (!$precision);
     
-    my @time_interval = (18000.0, 4039372800.0); #from January 1, 1970 to January 1, 2098
+    my @time_interval = (0.0, 4039372800.0); #from January 1, 1970 to January 1, 2098
     my @timehash = ();
     my @bits = (4, 2, 1);
     my $bit = 0;

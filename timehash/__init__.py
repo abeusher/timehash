@@ -96,8 +96,10 @@ def encode(timeseconds, precision=10):
     """
     Encode a timestamp given as a floating point epoch time to
     a timehash which will have the character count precision.
+
+    Fixed a nasty logic error in the timehash encode function, credit to LC3.
     """
-    time_interval = (18000.0, 4039372800.0)#from January 1, 1970 to January 1, 2098
+    time_interval = (0.0, 4039372800.0)#from January 1, 1970 to January 1, 2098
     timehash = []
     bits = [4, 2, 1]
     bit = 0

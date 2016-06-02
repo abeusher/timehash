@@ -161,6 +161,16 @@ def expand(hashcode):
     """
     return [before(hashcode), hashcode, after(hashcode)]
 
+def encode_from_datetime(datetime_object, precision=10):
+    """
+    Converts a Python datetime object into a timehash value.
+
+    For alternate ways to do datetime conversions, see also: http://stackoverflow.com/questions/6999726/how-can-i-convert-a-datetime-object-to-milliseconds-since-epoch-unix-time-in-p
+    """
+    milliseconds = time.mktime(datetime_object.timetuple())
+    return encode(milliseconds, precision)
+
+
 
 if __name__ == "__main__":
     """
@@ -213,3 +223,10 @@ if __name__ == "__main__":
     print("original rightnow = %.2f (%s)" % (rightnow,rightnow_hash))
     print("calculated rightnow = %.2f" % (rightnow_calculated))
     print("time error = +/- %.2f seconds." % (time_error))
+    print("\n")
+    print("\n")
+
+    #example of using timehash with a native datetime object
+    dt_rightnow = datetime.datetime.now()
+    sample_dt_hash = encode_from_datetime(dt_rightnow)
+    print sample_dt_hash

@@ -15,6 +15,8 @@ time <http://stackoverflow.com/questions/19386576/sliding-window-over-time-data-
 is a common practice in data analysis but prior to the timehash
 algorithm it was more of an art than a science.
 
+.. image:: timehash-shaded-partial.png
+
 Features
 --------
 

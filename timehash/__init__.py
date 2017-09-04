@@ -29,6 +29,7 @@
 """
 import time
 import datetime
+import calendar
 
 __base32 = '01abcdef'
 __before = 'f01abcde'
@@ -167,7 +168,7 @@ def encode_from_datetime(datetime_object, precision=10):
 
     For alternate ways to do datetime conversions, see also: http://stackoverflow.com/questions/6999726/how-can-i-convert-a-datetime-object-to-milliseconds-since-epoch-unix-time-in-p
     """
-    milliseconds = time.mktime(datetime_object.timetuple())
+    milliseconds = calendar.timegm(datetime_object.timetuple())
     return encode(milliseconds, precision)
 
 

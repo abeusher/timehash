@@ -126,9 +126,9 @@ def before(hashcode):
     """
     i = 1
     for c in reversed(hashcode):
-        padding = (i - 1) * 'f'
-        pos = len(hashcode) - i
         if c != '0':
+            padding = (i - 1) * 'f'
+            pos = len(hashcode) - i
             ret = hashcode[:pos] + __neighbormap[c][0] + padding
             return ret
         else:
@@ -140,9 +140,9 @@ def after(hashcode):
     """
     i = 1
     for c in reversed(hashcode):
-        padding = (i - 1) * '0'
-        pos = len(hashcode) - i
         if c != 'f':
+            padding = (i - 1) * '0'
+            pos = len(hashcode) - i
             ret = hashcode[:pos] + __neighbormap[c][1] + padding
             return ret
         else:

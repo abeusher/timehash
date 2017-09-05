@@ -40,6 +40,9 @@ Implementations
 -  `java
    timehash <https://github.com/abeusher/timehash/blob/master/TimeHash.java>`__
    - a reference implementation in java
+-  `javascript
+   time-hash <https://github.com/disarticulate/time-hash>`__
+   - port of reference implements
 
 Usage
 -----

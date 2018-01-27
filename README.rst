@@ -80,4 +80,6 @@ Contact
 
 - TimeHash Guru: `AbeUsher <http://www.linkedin.com/in/socialnetworkanalysis>`__
 - Python Packager: `Kevin Dwyer / @pheared <https://twitter.com/pheared>`__
+- Golang implementation: `Justin Shelton / @kwonstant <https://twitter.com/kwonstant>`__
+- Javascript implementation: `Eric Xanderson  <https://github.com/disarticulate>`__
 

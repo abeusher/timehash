@@ -43,6 +43,9 @@ Implementations
 -  `javascript
    time-hash <https://github.com/disarticulate/time-hash>`__
    - port of reference implements
+-  `golang
+   timehash <https://github.com/abeusher/timehash/blob/master/timehash.go>`__
+   - a reference implementation in Go
 
 Usage
 -----

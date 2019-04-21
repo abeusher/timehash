@@ -77,7 +77,7 @@ public class TimeHash {
 		result.put("center", timeValue);
 		result.put("error", timeError);
 		result.put("start", timeValue-timeError);
-		result.put("end", timeValue-timeError);
+		result.put("end", timeValue+timeError);
 		return result;
 	}
 	

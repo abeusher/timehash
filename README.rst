@@ -82,6 +82,6 @@ Contact
 - Python Packager: `Kevin Dwyer / @pheared <https://twitter.com/pheared>`__
 - Golang implementation: `Justin Shelton / @kwonstant <https://twitter.com/kwonstant>`__
 - Javascript implementation: `Eric Xanderson  <https://github.com/disarticulate>`__
-- Rust implementation: _`Kevin Dwyer / @pheared <https://github.com/dwyerk/timeharsh>`__
+- Rust implementation: `Kevin Dwyer / @pheared <https://github.com/dwyerk/timeharsh>`_
 - C impelmentation `Sam Mason <https://github.com/ukitake>`_
 - C# impelmentation `Sam Mason <https://github.com/ukitake>`_

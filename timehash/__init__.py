@@ -230,4 +230,4 @@ if __name__ == "__main__":
     #example of using timehash with a native datetime object
     dt_rightnow = datetime.datetime.now()
     sample_dt_hash = encode_from_datetime(dt_rightnow)
-    print sample_dt_hash
+    print(sample_dt_hash)

@@ -52,17 +52,18 @@ Times prior to 1970 or after 2098 are not accounted for by this scale.
 Each character added to the timehash reduces the time interval ambiguity by a factor of 8.
 Valid characters for encoding the floating point time into ASCII characters include {01abcdef}
 
-0 +/- 64 years
-1 +/- 8 years
-2 +/- 1 years
-3 +/- 45.65625 days
-4 +/- 5.707 days
-5 +/- 0.71337 days = 17.121 hours
-6 +/- 2.14013671875 hours
-7 +/- 0.26751708984375 hours = 16.05 minutes
-8 +/- 2.006378173828125 minutes
-9 +/- 0.2507 minutes = 15 seconds
-10 +/- 1.88097 seconds"""
+0 +/- 128 years
+1 +/- 16 years
+2 +/- 2 years
+3 +/- 91.25 days
+4 +/- 11.40623 days
+5 +/- 1.4257 days
+6 +/- 0.1782 days = 4.27 hours
+7 +/- 0.534 hours = 32.08 minutes
+8 +/- 4.010 minutes
+9 +/- 0.5012 minutes = 30.07 seconds
+10 +/- 3.7594 seconds
+11 +/- 0.4699 seconds"""
 
 
 def decode_exactly(timehash):

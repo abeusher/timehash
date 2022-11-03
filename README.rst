@@ -83,5 +83,5 @@ Contact
 - Golang implementation: `Justin Shelton / @kwonstant <https://twitter.com/kwonstant>`__
 - Javascript implementation: `Eric Xanderson  <https://github.com/disarticulate>`__
 - Rust implementation: `Kevin Dwyer / @pheared <https://github.com/dwyerk/timeharsh>`_
-- C impelmentation `Sam Mason <https://github.com/ukitake>`_
-- C# impelmentation `Sam Mason <https://github.com/ukitake>`_
+- C implementation `Sam Mason <https://github.com/ukitake>`_
+- C# implementation `Sam Mason <https://github.com/ukitake>`_
